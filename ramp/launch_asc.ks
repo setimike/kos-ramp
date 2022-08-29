@@ -18,6 +18,9 @@ local function defaultRotation {
 }
 parameter launchRoll is defaultRotation().
 
+// Circularize, or not. Support suborbital launches.
+parameter circularize is True.
+
 runoncepath("lib_parts").
 runoncepath("lib_ui").
 runoncepath("lib_util").
@@ -149,4 +152,6 @@ wait 1.
 
 // Circularize
 unlock all.
-run circ.
+if circularize {
+	run circ.
+}
