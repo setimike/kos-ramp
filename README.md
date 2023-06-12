@@ -5,7 +5,7 @@ Relatively Adequate Mission Planner (RAMP) is a set of kOS programs that aims
 to improve your [KSP](http://kerbalspaceprogram.com) experience in several ways:
 
  - Maximize the precision of your maneuvers
- - Let you focus on the fun parts of spaceflight by automating the drudgework
+ - Let you focus on the fun parts of spaceflight by automating the drudge work
  - Teach you about orbital mechanics and physics
 
 You can use the scripts as a kind of autopilot or poke into them to
@@ -30,11 +30,11 @@ After you reach a stable orbit, select a target. Use the transfer or rendezvous 
     run rendezvous. // travel to another vessel
 
     set target to body("Mun").
-    run transfer. // or, travel to a moon
+    run transfer. // or, travel to a moon.
 
 The boot, rendezvous and transfer scripts are [idempotent](https://en.wikipedia.org/wiki/Idempotence):
 you can safely run them at any time; they either make progress toward your goal, or error out
-with an explanation as to why they can't. The [universal boot leader](boot/README.md) is customizable per ship.
+with an explanation as to why they can't. The [universal boot loader](boot/README.md) is customizable per ship.
 
 Maneuvers
 =========
@@ -143,7 +143,7 @@ Function Libraries
 Programs beginning with `lib_` contain reusable functions and are invoked by
 other programs using `run once` or `runoncepath()`.
 
-Beware that libs cannot run other libs! If two library scripts depend on one another's functions, then you must make sure to `run once` both scripts from every top-level program that uses either oft hem!
+Beware that libs cannot run other libs! If two library scripts depend on one another's functions, then you must make sure to `run once` both scripts from every top-level program that uses either of them!
 
 Comments and Documentation
 --------------------------
